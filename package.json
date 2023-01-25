@@ -1,0 +1,54 @@
+{
+  "name": "foodexplorer-backend",
+  "version": "1.0.0",
+  "description": "API for food explorer application",
+  "main": "./src/app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=dev DEBUG=API:* nodemon ./src/app.js",
+    "start": "NODE_ENV=dev DEBUG=API:* nodemon ./src/app.js",
+    "win-dev": "SET NODE_ENV=dev DEBUG=API:* nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"**/*.js\"",
+    "lint-fix": "eslint --fix \"**/*.js\"",
+    "format": "npm run lint-fix && prettier --write \"**/*.+(json|js|md)\"",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.+(js)": [
+      "eslint --fix"
+    ],
+    "*.+(json|js|md)": [
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ac030540/FoodExplorer-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ac030540/FoodExplorer-Backend/issues"
+  },
+  "homepage": "https://github.com/ac030540/FoodExplorer-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3"
+  }
+}
