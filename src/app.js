@@ -1,17 +1,17 @@
-import express from 'express';
-import cors from 'cors';
-// import initRoutes from "./routes/index";
-import Debug from 'debug';
+import express from "express";
+import cors from "cors";
+import Debug from "debug";
+import initRoutes from "./routes/index.js";
 
-const debug = Debug('API:app');
+const debug = Debug("API:app");
 const app = express();
 
 app.use(cors());
 
 // REST API Routes
-// initRoutes(app);
+initRoutes(app);
 
-const server = app.listen(process.env.PORT || '3000', () =>
+const server = app.listen(process.env.PORT || "3000", () =>
   debug(`Server running on port ${process.env.PORT || 3000}`)
 );
 
